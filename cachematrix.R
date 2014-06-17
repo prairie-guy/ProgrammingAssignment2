@@ -1,7 +1,7 @@
 ## cachematrix.R
 
 ## These two functions demonstrate the use of a cache to avoid potentially costly duplicative calls on functions
-## that have been previously executed. Specifically, this code demonstrates cacheing in the context of the inverstion
+## that have been previously executed. Specifically, this code demonstrates caching in the context of the inversion
 ## of a matrix.
 
 
@@ -9,7 +9,7 @@
 ## a list comprised of four functions: set, get,set_i_mat and get_i_mat. Importantly, this instance of
 ## 'CacheMatrix' has its own environment in which specific values of 'mat' and 'i_mat' can be defined and saved.
 ## Because the four functions in the list are defined within this environment, subsequent calls of set, get,
-## set_i_mat and get_i_mat can reference these pecific values of 'mat' 'i_mat'.
+## set_i_mat and get_i_mat can reference these specific values of 'mat' 'i_mat'.
 
 makeCacheMatrix <- function(mat = matrix()) {
  i_mat <- NULL
@@ -26,7 +26,7 @@ makeCacheMatrix <- function(mat = matrix()) {
 ## If this is the first time 'cacheSolve' is called on this instance of 'CacheMatrix', it calculates the inverse
 ## of the matrix and uses 'set_i_mat' to save the inverse of the matrix within the environment of the instance of
 ## 'CacheMatrix'. If this is not the first time this instance of 'CacheMatrix' has been called by 'cacheSolve',
-## then the previously calculated invserse of the matrix is returned.
+## then the previously calculated inverse's of the matrix is returned.
 
 cacheSolve <- function(mat, ...) {
     ## Return a matrix that is the inverse of 'mat'
@@ -43,7 +43,7 @@ cacheSolve <- function(mat, ...) {
     }
 }
 
-## Test code to make sure everyting works
+## Test code to make sure everything works
 
 test_matrix_cache <- function() {
     m <- matrix(sample(1:20,9), 3,3)
